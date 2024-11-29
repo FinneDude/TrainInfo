@@ -80,6 +80,13 @@ namespace TrainInfo
                     100,
                     value => Game1.getTimeOfDayString(value)
                 );
+                configMenuApi.AddBoolOption(
+                    ModManifest,
+                    name: () => this.Helper.Translation.Get("config.option.show_content.name"),
+                    tooltip: () => this.Helper.Translation.Get("config.option.show_content.description"),
+                    getValue: () => Config.ShowContent,
+                    setValue: value => Config.ShowContent = value
+                );
             }
         }
 
