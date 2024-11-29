@@ -1,11 +1,13 @@
 {
-  "Name": "Train Info Test",
-  "Author": "FinneDude",
-  "Version": "1.0",
-  "Description": "Attempt to add config options to BinaryLip's Train Info",
-  "UniqueID": "FinneDude.TrainInfo",
+  "Name": "Train Info",
+  "Author": "BinaryLip",
+  "Version": "1.0.1",
+  "Description": "Displays a popup of what's going to be in the train passing through Stardew Valley",
+  "UniqueID": "BinaryLip.TrainInfo",
   "EntryDll": "TrainInfo.dll",
   "MinimumApiVersion": "4.0.0",
   "UpdateKeys": [
+    "Nexus:21883",
+    "CurseForge:1035850"
   ]
 }
