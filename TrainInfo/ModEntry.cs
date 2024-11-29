@@ -211,14 +211,17 @@ namespace TrainInfo
 
         public void DisplayTrainContents(Dictionary<string, int> trainItems)
         {
-            string message = string.Join(Environment.NewLine, trainItems.Select(item => $"{item.Value} {ItemRegistry.Create(item.Key).DisplayName}"));
-            message = string.IsNullOrEmpty(message) ? this.Helper.Translation.Get("empty_train") : message;
-            CustomHUDMessage trainContentsMessage = new(message)
+            if (Config.ShowContent)
             {
-                timeLeft = 7000f,
-                titleText = this.Helper.Translation.Get("list_title")
-            };
-            Game1.addHUDMessage(trainContentsMessage);
+                string message = string.Join(Environment.NewLine, trainItems.Select(item => $"{item.Value} {ItemRegistry.Create(item.Key).DisplayName}"));
+                message = string.IsNullOrEmpty(message) ? this.Helper.Translation.Get("empty_train") : message;
+                CustomHUDMessage trainContentsMessage = new(message)
+                {
+                    timeLeft = 7000f,
+                    titleText = this.Helper.Translation.Get("list_title")
+                };
+                Game1.addHUDMessage(trainContentsMessage);
+            }
         }
     }
 }
