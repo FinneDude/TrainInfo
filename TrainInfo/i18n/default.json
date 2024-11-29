@@ -1,6 +1,8 @@
 {
   "config.option.notification_time.name": "Train tomorrow notification time",
   "config.option.notification_time.description": "When to display the notification that a train is coming tomorrow",
+  "config.option.show_content.name": "Display train content",
+  "config.option.show_content.description": "Set to false, if you don't want to see a message about the content of the coming train",
   "list_title": "Train Contents",
   "train_today": "A train will be passing through Stardew Valley today at {{time}}",
   "train_tomorrow": "A train will be passing through Stardew Valley tomorrow at {{time}}",
